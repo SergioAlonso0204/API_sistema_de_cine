@@ -16,6 +16,9 @@ mongoose.connect('mongodb://localhost/cineDB', {
 // Middleware
 app.use(bodyParser.json());
 
+// Rutas de autenticación
+app.use('/api/auth', authRoutes); // Utiliza las rutas de autenticación en /api/auth
+
 // Rutas
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
